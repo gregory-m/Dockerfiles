@@ -4,5 +4,4 @@ RUN apt-get update && apt-get install -y tor && apt-get clean
 ADD torrc /etc/tor/torrc
 EXPOSE 9051
 VOLUME ["/opt/tor/hidden_services"]
-USER debian-tor
 CMD tor --HashedControlPassword $TOR_CONTROL_PASSWD
